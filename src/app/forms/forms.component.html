@@ -6,14 +6,14 @@
                     <label for="userName">UserName</label>
                     <input required ngModel name="userName" #UserName="ngModel" type="text" class="form-control"
                         pattern="[A-Za-z]+" minlength="6">
-                    <strong class="text-danger" *ngIf="UserName.touched && UserName.hasError('required')">
+                    <strong class="text-danger mt-2" *ngIf="UserName.touched && UserName.hasError('required')">
                         UserName is required feald
                     </strong>
-                    <strong class="text-danger" *ngIf="UserName.dirty && UserName.hasError('pattern')">
+                    <strong class="text-danger mt-2" *ngIf="UserName.dirty && UserName.hasError('pattern')">
                         UserName shoud have only alphabets!!!
                     </strong>
 
-                    <strong class="text-danger" *ngIf="UserName.dirty && UserName.hasError('minlength')">
+                    <strong class="text-danger mt-2" *ngIf="UserName.dirty && UserName.hasError('minlength')">
                         Minlength of userName shoud be {{UserName.errors?.['minlength'].requiredLength}} and actualLength
                         is {{UserName.errors?.['minlength'].actualLength}}
                     </strong>
@@ -30,11 +30,11 @@
                       pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
                        >
 
-                       <strong class="text-danger" *ngIf="email.touched && email.hasError('required')">
+                       <strong class="text-danger mt-2" *ngIf="email.touched && email.hasError('required')">
                         Email is required filed !!!
                        </strong>
 
-                       <strong class="text-danger" *ngIf="email.dirty && email.hasError('pattern')">
+                       <strong class="text-danger mt-2" *ngIf="email.dirty && email.hasError('pattern')">
                         Plz enter valid email address (xyz@gmail.com)
                        </strong>
                 </div>

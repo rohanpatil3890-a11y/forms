@@ -10,18 +10,20 @@ export class FormsComponent implements OnInit {
 
   constructor() { }
 
+   @ViewChild('signUpForm') signUpForm !: NgForm
+
   ngOnInit(): void {
 
-    // setTimeout(() =>{
-    //  console.log(this.SignUpForm)
-    // },0)
+  
   }
 
-  @ViewChild('SignUpForm') SignUpForm !:NgForm;
-
-  onSubmit(){
-    console.log(this.SignUpForm)
-  }
-
+ onsubmitForm(){
+  console.log(this.signUpForm);
+  
+ }
+   
+// onAddData(){
+//  console.log( this.signUpForm.value)
+// }
 
 }
